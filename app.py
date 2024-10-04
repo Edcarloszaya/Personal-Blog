@@ -3,7 +3,7 @@
 from flask import Flask
 from personal_blog.controller.post_controller import post_bp
 
-# Configurando o caminho customizado para a pasta de templates
+
 app = Flask(__name__)
 
 # Registra as rotas
