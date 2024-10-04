@@ -1,0 +1,24 @@
+
+
+ul li h2 li {
+   display: flex;
+   flex-wrap: wrap;
+   
+
+   
+}
+
+ul li h2 li a{
+    
+    text-decoration: none;
+    color: black;
+    
+}
+
+.color{
+    
+    margin-left: 10%;
+    text-decoration: none;
+    color: rgb(168, 182, 180);
+    
+}
