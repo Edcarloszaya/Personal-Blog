@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title%} Home- Personal Blog {% endblock %}
+
+{% block content%}
+
+<h2>{{post['title']}}</h2>
+
+<h3>{{post['date']}}</h3>
+
+<p>{{post['content']}}</p>
+
+
+{% endblock %}
