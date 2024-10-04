@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title%} Home- Personal Blog {% endblock %}
+
+{% block content%}
+    <h1>Personal Blog</h1>
+    <ul>
+        {% for post in posts %}
+            <li>
+                <h2>
+                    <li>
+                        <a href="{{ url_for('post.post_detail', post_id=post['id']) }}">{{ post['title'] }}</a>
+                        <a class="color" href="{{ url_for('post.post_detail', post_id=post['id']) }}">{{ post['date'] }}</a>
+                    </li> 
+                </h2>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
