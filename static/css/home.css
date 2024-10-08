@@ -1,4 +1,11 @@
 
+div {
+    width: 45%;
+    border: solid black 1px;
+    font-size: smaller;
+
+    
+}
 
 ul li h2 li {
    display: flex;
