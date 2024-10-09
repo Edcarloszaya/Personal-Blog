@@ -2,9 +2,9 @@ import json
 
 
 class Post:
-    '''
-        class Post pra manipulacao do json
-    '''
+    """
+    class Post pra manipulacao do json
+    """
 
     FILE_PATH = "data/posts.json"
 
@@ -15,9 +15,24 @@ class Post:
             return json.load(file)
 
     @staticmethod
-    def save_posts(posts):
+    def edit_post(post_edited, post_id):
+        # editar um post especifico por id
+        
+        posts = Post.get_all()
+        for post in posts:
+            if post["id"] == post_id:
+                post["title"] = post_edited["title"]
+                post["date"] = post_edited["date"]
+                post["content"] = post_edited["content"]
+
         # recebe  posts e salva no banco de dados
-        with open(Post.FILE_PATH, "r") as file:
+        with open(Post.FILE_PATH, "w") as file:
+            json.dump(posts, file, indent=4)
+            
+    @staticmethod
+    def save_posts(posts):
+         # recebe  posts e salva no banco de dados
+        with open(Post.FILE_PATH, "w") as file:
             json.dump(posts, file, indent=4)
 
     @staticmethod
