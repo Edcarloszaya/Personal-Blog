@@ -1,4 +1,4 @@
-Sample solution for the [[personal-blog](https://roadmap.sh/)] challenge from [[roadmap](https://roadmap.sh/)]
+Sample solution for the [[personal-blog](https://roadmap.sh/projects/personal-blog)] challenge from [[roadmap](https://roadmap.sh/)]
 
 ## installation
 
