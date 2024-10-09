@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title%} Home- Personal Blog {% endblock %}
+
+{% block content%}
+
+
+<!-- painel admin  -->
+<div class="conteudo">
+
+    <h2>Personal Blog</h2>
+
+    <div class="add">
+        <a class="actions" href="{{ url_for('post.new_post') }}">+ Add</a>
+    </div>
+
+
+    <div>
+        <ul>
+            {% for post in posts %}
+            <li class="admin_painel">
+                <span> {{post['title']}}</span>
+                <a class="actions" href="{{ url_for('post.edit', post_id=post['id']) }}">Edit</a>
+                <a class="actions" href="{{ url_for('post.delete', post_id=post['id']) }}">Delete</a>
+            </li>
+            {% endfor %}
+
+        </ul>
+    </div>
+
+</div>
+
+<!-- se tiver messagem exibir em relacao a edita deleta ou add um post mostra ao usuario -->
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+<div class="message">
+    
+<ul class="flashes">
+    {% for category, message in messages %}
+    <span>{{message}}</span>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
+
+</div>
+
+{% endblock %}
