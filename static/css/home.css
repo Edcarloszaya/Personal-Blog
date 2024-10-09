@@ -1,31 +1,31 @@
-
-div {
-    width: 45%;
+.home_box {
+    width: 35%;
     border: solid black 1px;
     font-size: smaller;
 
-    
 }
+
+
 
 ul li h2 li {
-   display: flex;
-   flex-wrap: wrap;
-   
+    display: flex;
+    flex-wrap: wrap;
 
-   
+
+
 }
 
-ul li h2 li a{
-    
+ul li h2 li a {
+
     text-decoration: none;
     color: black;
-    
+
 }
 
-.color{
-    
+.color {
+
     margin-left: 10%;
     text-decoration: none;
     color: rgb(168, 182, 180);
-    
+
 }
