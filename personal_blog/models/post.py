@@ -11,7 +11,7 @@ class Post:
     @staticmethod
     def load_posts():
         # carrega os posts do banco de dados
-        with open(Post.FILE_PATH, "r") as file:
+        with open(Post.FILE_PATH, "r",encoding='utf-8') as file:
             return json.load(file)
 
     @staticmethod
@@ -26,13 +26,13 @@ class Post:
                 post["content"] = post_edited["content"]
 
         # recebe  posts e salva no banco de dados
-        with open(Post.FILE_PATH, "w") as file:
+        with open(Post.FILE_PATH, "w",encoding='utf-8') as file:
             json.dump(posts, file, indent=4)
             
     @staticmethod
     def save_posts(posts):
          # recebe  posts e salva no banco de dados
-        with open(Post.FILE_PATH, "w") as file:
+        with open(Post.FILE_PATH, "w",encoding='utf-8') as file:
             json.dump(posts, file, indent=4)
 
     @staticmethod
