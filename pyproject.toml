@@ -8,6 +8,8 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.12"
 flask = "*"
+flask-wtf = "^1.2.1"
+flask-httpauth = "*"
 
 
 [build-system]
