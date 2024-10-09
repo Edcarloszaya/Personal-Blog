@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title%} Home- Personal Blog {% endblock %}
+
+{% block content%}
+
+<!-- formulario de loguin do blog  -->
+<div class="editform">
+
+    <h2>Login</h2>
+
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <div>
+            {{ form.username.label }}<br>
+            {{ form.username(size=40) }}
+        </div>
+        <div>
+            {{ form.password.label }}<br>
+            {{ form.password(size=40) }}
+        </div>
+        <div>
+            {{ form.submit() }}
+        </div>
+    </form>
+
+</div>
+
+<!-- se tiver messagem exibir em relacao da senha ao usuario -->
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+<div class="message">
+
+    <ul class="flashes">
+        {% for category, message in messages %}
+        <span>{{message}}</span>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+
+</div>
+
+
+{% endblock %}
